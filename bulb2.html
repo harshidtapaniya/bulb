@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        body{
+            background-color: var(--white_color);
+           
+        }  
+        .power {
+        margin-top: 250px;
+        margin-left:40%;  
+        } 
+          h1{
+            margin-bottom: 40px;
+            font-size: 50px;
+        }
+           button{
+            height:100px;
+            width: 100px;
+            position:relative;
+            font-size:50px;
+            text-align: center;
+            margin-right:40px;
+            border: 2px solid black;
+            font-family: 'Courier New', Courier, monospace;
+
+        }   
+    </style>
+</head>
+<body>
+
+             <div class="power">
+                <h1>BULB TURN ON/OFF</h1>
+                <img class="bulboff" src ="light-bulb-off.jpg" height="500px" width="500px">
+            
+                     <button id="bulbon">on</button>
+                 </div>
+            
+            <script>
+                     const bulbon = document.getElementById("bulbon");
+
+                     bulbon.addEventListener('click',onmode)
+                function onmode(){
+                const bulbon = document.querySelector(".bulboff");
+           
+                if (this.innerText == "off") {
+                    this.innerText = "on"
+                    bulbon.setAttribute('src','light-bulb-on.jpg');
+                    bulbon.setAttribute('src','light-bulb-off.jpg');
+                } else {
+                    this.innerText = "off";
+                    bulbon.setAttribute('src','light-bulb-off.jpg');   
+                    bulbon.setAttribute('src','light-bulb-on.jpg');
+                    
+                }
+            }
+            </script>
+    </div>
+
+    
+           
+    
+</body>
+</html>  
